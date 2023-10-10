@@ -7,17 +7,23 @@ import { RouterModule } from "@angular/router";
   standalone: true,
   imports: [HomeComponent, RouterModule],
   template: `
-  <main>
-    <a [routerLink]="['/']">
+    <main>
       <header class="brand-name">
-        <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
+        <a [routerLink]="['/']">
+          <img
+            class="brand-logo"
+            src="/assets/logo.svg"
+            alt="logo"
+            aria-hidden="true"
+          />
+        </a>
       </header>
-    </a>
-    <section class="content">
-      <router-outlet></router-outlet>
-    </section>
-  </main>
-`,
+
+      <section class="content">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  `,
   styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
